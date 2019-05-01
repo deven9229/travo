@@ -1,0 +1,47 @@
+<%= form_with(model: guide, local: true) do |form| %>
+  <% if guide.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(guide.errors.count, "error") %> prohibited this guide from being saved:</h2>
+
+      <ul>
+      <% guide.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :license %>
+    <%= form.text_area :license %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_area :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :guide_type %>
+    <%= form.text_area :guide_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_birth %>
+    <%= form.number_field :date_of_birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :languages %>
+    <%= form.text_area :languages %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

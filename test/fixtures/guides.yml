@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  license: MyText
+  gender: MyText
+  guide_type: MyText
+  date_of_birth: 1
+  languages: MyText
+
+two:
+  name: MyString
+  license: MyText
+  gender: MyText
+  guide_type: MyText
+  date_of_birth: 1
+  languages: MyText
