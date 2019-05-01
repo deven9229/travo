@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rental_agency_or_person: MyString
+  contact_number: MyText
+  address: MyText
+
+two:
+  rental_agency_or_person: MyString
+  contact_number: MyText
+  address: MyText

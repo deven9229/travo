@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rental agency or person:</strong>
+  <%= @rental.rental_agency_or_person %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @rental.contact_number %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @rental.address %>
+</p>
+
+<%= link_to 'Edit', edit_rental_path(@rental) %> |
+<%= link_to 'Back', rentals_path %>
