@@ -22,8 +22,9 @@
   </div>
 
   <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_area :gender %>
+    <b>Gender</b><br/>
+    <%= form.radio_button :country, 'Male' %> Male<br />
+    <%= form.radio_button :country, 'Female' %> Female<br />
   </div>
 
   <div class="field">
@@ -37,8 +38,11 @@
   </div>
 
   <div class="field">
-    <%= form.label :languages %>
-    <%= form.text_area :languages %>
+    <b>Languages</b><br/> 
+    <input type="checkbox" name="language" value="English"> English
+    <input type="checkbox" name="language" value="Hindi"> Hindi 
+    <input type="checkbox" name="language" value="Dzongkha"> Dzongkha
+
   </div>
 
   <div class="actions">
