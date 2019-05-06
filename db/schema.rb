@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_01_085153) do
+ActiveRecord::Schema.define(version: 2019_05_06_065031) do
 
   create_table "companies", force: :cascade do |t|
     t.string "company_name"
@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 2019_05_01_085153) do
     t.text "license"
     t.text "gender"
     t.text "guide_type"
-    t.integer "date_of_birth"
     t.text "languages"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "date_of_birth"
   end
 
   create_table "rentals", force: :cascade do |t|

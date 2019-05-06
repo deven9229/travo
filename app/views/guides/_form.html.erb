@@ -23,8 +23,9 @@
 
   <div class="field">
     <b>Gender</b><br/>
-    <%= form.radio_button :country, 'Male' %> Male<br />
-    <%= form.radio_button :country, 'Female' %> Female<br />
+    <%= form.radio_button :gender, 'Male' %> Male<br />
+    <%= form.radio_button :gender, 'Female' %> Female<br />
+    
   </div>
 
   <div class="field">
@@ -34,7 +35,7 @@
 
   <div class="field">
     <%= form.label :date_of_birth %>
-    <%= form.number_field :date_of_birth %>
+    <%= form.date_field :date_of_birth %>
   </div>
 
   <div class="field">
