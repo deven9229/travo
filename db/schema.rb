@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_06_065031) do
+ActiveRecord::Schema.define(version: 2019_05_08_161236) do
 
   create_table "companies", force: :cascade do |t|
     t.string "company_name"
@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(version: 2019_05_06_065031) do
     t.text "license_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "guide_languages", force: :cascade do |t|
+    t.integer "guide_id"
+    t.integer "language_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["guide_id"], name: "index_guide_languages_on_guide_id"
+    t.index ["language_id"], name: "index_guide_languages_on_language_id"
   end
 
   create_table "guides", force: :cascade do |t|
@@ -29,6 +38,12 @@ ActiveRecord::Schema.define(version: 2019_05_06_065031) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "date_of_birth"
+  end
+
+  create_table "languages", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "rentals", force: :cascade do |t|
