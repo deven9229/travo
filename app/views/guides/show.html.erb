@@ -27,7 +27,7 @@
 
 <p>
   <strong>Languages:</strong>
-  <%= @guide.languages %>
+  <%= @guide.languages.map(&:name).join(', ') %>
 </p>
 
 <%= link_to 'Edit', edit_guide_path(@guide) %> |

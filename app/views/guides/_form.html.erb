@@ -25,7 +25,7 @@
     <b>Gender</b><br/>
     <%= form.radio_button :gender, 'Male' %> Male<br />
     <%= form.radio_button :gender, 'Female' %> Female<br />
-    
+
   </div>
 
   <div class="field">
@@ -39,11 +39,8 @@
   </div>
 
   <div class="field">
-    <b>Languages</b><br/> 
-    <input type="checkbox" name="language" value="English"> English
-    <input type="checkbox" name="language" value="Hindi"> Hindi 
-    <input type="checkbox" name="language" value="Dzongkha"> Dzongkha
-
+    <b>Languages</b><br/>
+    <%= form.collection_check_boxes :language_ids, Language.all, :id, :name %>
   </div>
 
   <div class="actions">
