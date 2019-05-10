@@ -23,7 +23,7 @@
         <td><%= guide.gender %></td>
         <td><%= guide.guide_type %></td>
         <td><%= guide.date_of_birth %></td>
-        <td><%= guide.languages %></td>
+        <td><%= guide.languages.map &:name %></td>
         <td><%= link_to 'Show', guide %></td>
         <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
         <td><%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
