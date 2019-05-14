@@ -42,6 +42,25 @@
     <b>Languages</b><br/>
     <%= form.collection_check_boxes :language_ids, Language.all, :id, :name %>
   </div>
+  
+  <div class="field">
+    <%= form.label :cid %>
+    <%= form.text_area :cid %>
+  </div>
+
+ <div class="field">
+    <%= form.label :license_expiry_date %>
+    <%= form.text_area :license_expiry_date %>
+  </div>
+ <div class="field">
+    <%= form.label :contact_number %>
+    <%= form.text_area :contact_number %>
+  </div>
+
+ <div class="field">
+    <%= form.label :email %>
+    <%= form.text_area :email%>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
