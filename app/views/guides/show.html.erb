@@ -16,8 +16,8 @@
 </p>
 
 <p>
-  <strong>Guide type:</strong>
-  <%= @guide.guide_type %>
+  <strong>License type:</strong>
+  <%= @guide.license_type %>
 </p>
 
 <p>
@@ -29,6 +29,28 @@
   <strong>Languages:</strong>
   <%= @guide.languages.map(&:name).join(', ') %>
 </p>
+
+<p>
+  <strong>CID:</strong>
+  <%= @guide.cid %>
+</p>
+
+<p>
+  <strong>License expiry date:</strong>
+  <%= @guide.license_expiry_date %>
+</p>
+
+<p>
+  <strong>Contact_number:</strong>
+  <%= @guide.contact_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @guide.email %>
+</p>
+
+
 
 <%= link_to 'Edit', edit_guide_path(@guide) %> |
 <%= link_to 'Back', guides_path %>
