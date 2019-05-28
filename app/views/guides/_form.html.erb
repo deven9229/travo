@@ -1,8 +1,7 @@
 <%= form_with(model: guide, local: true) do |form| %>
   <% if guide.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(guide.errors.count, "error") %> prohibited this guide from being saved:</h2>
-
+      <h2>Errors:</h2>
       <ul>
       <% guide.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -17,8 +16,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :license %>
-    <%= form.text_area :license %>
+    <%= form.label :license_number%>
+    <%= form.text_area :license_number %>
   </div>
 
   <div class="field">
@@ -43,7 +42,7 @@
     <b>Languages</b><br/>
     <%= form.collection_check_boxes :language_ids, Language.all, :id, :name %>
   </div>
-  
+
   <div class="field">
     <%= form.label :cid %>
     <%= form.text_area :cid %>

@@ -27,7 +27,7 @@ class GuidesController < ApplicationController
     @guide = Guide.new(guide_params)
 
     respond_to do |format|
-      if @guide.save
+     if @guide.save
         format.html { redirect_to @guide, notice: 'Guide was successfully created.' }
         format.json { render :show, status: :created, location: @guide }
       else
@@ -69,6 +69,6 @@ class GuidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guide_params
-      params.require(:guide).permit(:name, :license, :gender, :license_type, :date_of_birth, :cid, :license_expiry_date, :contact_number, :email, language_ids: [])
+      params.require(:guide).permit(:name, :license_number, :gender, :license_type, :date_of_birth, :cid, :license_expiry_date, :contact_number, :email, language_ids: [])
     end
 end

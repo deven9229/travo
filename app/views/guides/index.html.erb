@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>License</th>
+      <th>License number</th>
       <th>Gender</th>
       <th>License type</th>
       <th>Date of birth</th>
@@ -23,7 +23,7 @@
     <% @guides.each do |guide| %>
       <tr>
         <td><%= guide.name %></td>
-        <td><%= guide.license %></td>
+        <td><%= guide.license_number%></td>
         <td><%= guide.gender %></td>
         <td><%= guide.license_type %></td>
         <td><%= guide.date_of_birth %></td>
@@ -31,7 +31,7 @@
         <td><%= guide.cid %></td>
         <td><%= guide.license_expiry_date %></td>
         <td><%= guide.contact_number %></td>
-        <td><%= guide.email %></td>  
+        <td><%= guide.email %></td>
         </td>
         <td><%= link_to 'Show', guide %></td>
         <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
