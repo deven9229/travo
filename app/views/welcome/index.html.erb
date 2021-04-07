@@ -1,28 +1,16 @@
-<h1> Welcome to our rails app</h1>
+<div class="center jumbotron">
+    <h1>Welcome to the Travo App</h1>
+<h2>
+    This is the home page for the 
+    <a href="https://www.railstutorial.org/">Ruby on Rails
+ Tutorial</a>
+    Travo application.
+</h2>
 
-<% if current_user %>
-<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-<% else %>
-<%= link_to 'Sign up', new_user_registration_path %>
-<%= link_to 'Sign in', new_user_session_path %>
-<% end %>
-
-<header class="navbar  navbar-inverse">
-<div class="navbar-class">
-<div class="container">
-
-
-<!-- Collect the nav links, forms, and other content for toggling -->
-
-
-  <ul class="nav navbar-nav">
-  <li class="active"><a href="">Home</a></li>
+<%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary"%>
+</div>
+  <ul>
     <li> <%= link_to "Companies", companies_path %></li>
     <li><%= link_to "Guides", guides_path %></li>
    <li><%= link_to "Rentals", rentals_path %></a></li>
   </ul>
-
-
-  </div>
- </div>
- </header>
