@@ -40,7 +40,7 @@
 
   <div class="field">
     <b>Languages</b><br/>
-    <%= form.collection_check_boxes :language_ids, Language.all, :id, :name %>
+    <%= form.collection_check_boxes(:language_ids, { 'English': 1, 'Chinese': 2, 'Hindi': 3 }, :last, :first)%>
   </div>
 
   <div class="field">
@@ -64,7 +64,7 @@
   </div>
 
   <div class="actions">
-    <%= form.submit "create", class: 'btn btn-primary' %>
+    <%= form.submit "Create", class: 'btn btn-primary' %>
   </div>
 <% end %>
   <%= link_to 'Back', guides_path %>
