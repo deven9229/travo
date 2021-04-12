@@ -1,5 +1,4 @@
-<%= render 'searches/new' %>
-<h1>Guides List</h1>
+<h1>Search Result</h1>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -16,8 +15,8 @@
     </tr>
   </thead>
   <tbody>
-    <% @guides.each do |guide| %>
-      <tr>
+<% @search.search_guides.each do |guide| %>
+     <tr>
         <td><%= guide.name %></td>
         <td><%= guide.license_number%></td>
         <td><%= guide.gender %></td>
@@ -28,15 +27,8 @@
         <td><%= guide.license_expiry_date %></td>
         <td><%= guide.contact_number %></td>
         <td><%= guide.email %></td>
-        </td>
-        <td><%= link_to 'Show', guide %></td>
-        <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
-        <td><%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Guide', new_guide_path %>
+<%= link_to "Back", guides_path%>
