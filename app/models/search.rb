@@ -3,7 +3,5 @@ class Search < ApplicationRecord
     guides = Guide.all
     guides = guides.where(["name LIKE ?","%#{name}%"]) if name.present?
     guides = guides.where(["gender LIKE ?",gender]) if gender.present?
-    else 
-    guides.all
    end 
 end

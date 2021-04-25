@@ -1,7 +1,6 @@
 class SearchesController < ApplicationController
     def new
         @search = Search.new
-        @gender = Guide.uniq.plunk(:gender)
     end
 
     def create
