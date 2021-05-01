@@ -4,7 +4,8 @@ class GuidesController < ApplicationController
   # GET /guides
   # GET /guides.json
   def index
-    @guides = Guide.all
+      @guides = Guide.search_name(params[:name])
+      @guides = Guide.search_gender(params[:gender]) 
   end
 
   # GET /guides/1
@@ -25,7 +26,6 @@ class GuidesController < ApplicationController
   # POST /guides.json
   def create
     @guide = Guide.new(guide_params)
-
     respond_to do |format|
      if @guide.save
         format.html { redirect_to @guide, notice: 'Guide was successfully created.' }
@@ -69,6 +69,6 @@ class GuidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guide_params
-      params.require(:guide).permit(:name, :license_number, :gender, :license_type, :date_of_birth, :cid, :license_expiry_date, :contact_number, :email, language_id: [])
+      params.require(:guide).permit(:name, :license_number, :gender, :license_type, :date_of_birth, :cid, :license_expiry_date, :contact_number, :email, :language_ids => [])
     end
 end

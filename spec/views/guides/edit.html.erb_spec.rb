@@ -13,7 +13,7 @@ RSpec.describe "guides/edit", type: :view do
       license_expiry_date: "2028", 
       contact_number: "17898389", 
       email: "nate@exmaple.com",
-      language_ids: "english"
+      language_ids: [1,2,3]
     ))
   end
 
