@@ -4,8 +4,13 @@ class GuidesController < ApplicationController
   # GET /guides
   # GET /guides.json
   def index
+    if params[:name].present?
       @guides = Guide.search_name(params[:name])
+    elsif params[:gender].present?
       @guides = Guide.search_gender(params[:gender]) 
+    else 
+      all 
+    end  
   end
 
   # GET /guides/1

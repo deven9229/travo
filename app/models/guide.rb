@@ -16,7 +16,6 @@ class Guide < ApplicationRecord
         else 
       all 
     end     
-  end
-  
+  end   
 end
  
