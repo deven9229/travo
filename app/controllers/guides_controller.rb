@@ -9,7 +9,7 @@ class GuidesController < ApplicationController
     elsif params[:gender].present?
       @guides = Guide.search_gender(params[:gender]) 
     else 
-      all 
+      @guides = Guide.all 
     end  
   end
 
