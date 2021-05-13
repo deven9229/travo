@@ -8,7 +8,7 @@
     <%= text_field_tag :name, params[:name] %><br />
 
     <%= label_tag :gender %>
-    <%= select_tag :gender, options_for_select(['Male', 'Female'], params[:gender]) %><br /> 
+    <%= select_tag :gender, options_for_select(['', 'Male', 'Female'], params[:gender]) %><br /> 
 
   <%= submit_tag "Search" %>
 <% end %>
