@@ -1,10 +1,11 @@
 class GuidesController < ApplicationController
-  before_action :set_guide, only: [:show, :edit, :update, :destroy]
 
   # GET /guides
   # GET /guides.json
   def index
-   @guides = Guide.search(params)  
+    @guides = Guide.search(params)  
+    @page = params.fetch(:page, 0).to_i 
+    @guides = Guide.offset(@page * 10).limit(10)
   end
 
   # GET /guides/1
