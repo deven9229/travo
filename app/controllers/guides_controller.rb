@@ -1,5 +1,5 @@
 class GuidesController < ApplicationController
-
+before_action :set_guide, only: [:show, :edit, :update, :destroy]
   # GET /guides
   # GET /guides.json
   def index
